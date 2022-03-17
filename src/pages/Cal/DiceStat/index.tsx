@@ -65,6 +65,14 @@ export default function DiceStat(): JSX.Element {
         die.pupEff2 * (filter.level - 1)) *
         100
     ) / 100;
+  const eff3 =
+    die &&
+    Math.round(
+      (die.eff3 +
+        die.cupEff3 * (filter.class - minClass) +
+        die.pupEff3 * (filter.level - 1)) *
+        100
+    ) / 100;
   return (
     <PageWrapper
       isContentReady={!!die}
